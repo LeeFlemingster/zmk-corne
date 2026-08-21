@@ -54,6 +54,39 @@
             bindings = <&kp SQT>, <&kp DQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        // Swap <> with () ",/("
+        COMMA: comma_left_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp LPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Swap <> with () "./)"
+        DOT: dot_right_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp RPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Swap <> with () "9/<"
+        NINE: number9_less_than {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp LT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // Swap <> with () "0/>"
+        ZERO: number0_greater_than {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 };
 
@@ -64,7 +97,7 @@
                 default_layer {
                         bindings = <
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮  ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
-     &kp NUBS     &QUOTE       &kp COMMA    &kp DOT      &kp P        &kp Y           &kp F        &kp G        &kp C        &kp R        &kp L        &kp FSLH
+     &kp NUBS     &QUOTE       &COMMA       &DOT         &kp P        &kp Y           &kp F        &kp G        &kp C        &kp R        &kp L        &kp FSLH
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
      &kp ESC      &kp A       &hml LMETA O &hml LALT E  &hml LCTRL U  &kp I           &kp D       &hmr RCTRL H &hmr RALT T  &hmr RMETA N  &kp S        &kp MINUS
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
@@ -79,7 +112,7 @@
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮  ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
      &kp GRAVE    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5          &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-     &kp TAB      &kp N1       &N2AT        &kp N3       &kp N4       &kp N5          &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &trans
+     &kp TAB      &kp N1       &N2AT        &kp N3       &kp N4       &kp N5          &kp N6       &kp N7       &kp N8       &NINE        &ZERO        &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
      &trans       &kp EQUAL    &kp HASH     &kp LBKT     &kp RBKT     &none           &none        &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans
 // ╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┴────────────┴────────────┴────────────╯
