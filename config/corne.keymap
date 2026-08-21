@@ -38,6 +38,22 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
+
+        // US style 2/@ key
+        N2AT: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp AT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // US style '/" key
+        QUOTE: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp DQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 };
 
@@ -48,7 +64,7 @@
                 default_layer {
                         bindings = <
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮  ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
-     &kp NUBS     &kp SQT      &kp COMMA    &kp DOT      &kp P        &kp Y           &kp F        &kp G        &kp C        &kp R        &kp L        &kp FSLH
+     &kp NUBS     &QUOTE       &kp COMMA    &kp DOT      &kp P        &kp Y           &kp F        &kp G        &kp C        &kp R        &kp L        &kp FSLH
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
      &kp ESC      &kp A       &hml LMETA O &hml LALT E  &hml LCTRL U  &kp I           &kp D       &hmr RCTRL H &hmr RALT T  &hmr RMETA N  &kp S        &kp MINUS
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
@@ -63,7 +79,7 @@
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮  ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
      &kp GRAVE    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5          &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-     &kp TAB      &kp N1       &kp N2       &kp N3       &kp N4       &kp N5          &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &trans
+     &kp TAB      &kp N1       &N2AT        &kp N3       &kp N4       &kp N5          &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
      &trans       &kp EQUAL    &kp HASH     &kp LBKT     &kp RBKT     &none           &none        &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans
 // ╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┴────────────┴────────────┴────────────╯
