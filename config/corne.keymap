@@ -64,7 +64,7 @@
         };
 
         // Swap <> with () "./)"
-        DOT: dot_right_bracket {
+        DOTRPAR: dot_right_bracket {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp RPAR>;
@@ -97,7 +97,7 @@
                 default_layer {
                         bindings = <
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮  ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
-     &kp NUBS     &QUOTE       &COMLPAR     &DOT         &kp P        &kp Y           &kp F        &kp G        &kp C        &kp R        &kp L        &kp FSLH
+     &kp NUBS     &QUOTE       &COMLPAR     &DOTRPAR     &kp P        &kp Y           &kp F        &kp G        &kp C        &kp R        &kp L        &kp FSLH
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
      &kp ESC      &kp A       &hml LMETA O &hml LALT E  &hml LCTRL U  &kp I           &kp D       &hmr RCTRL H &hmr RALT T  &hmr RMETA N  &kp S        &kp MINUS
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
