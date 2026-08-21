@@ -40,7 +40,7 @@
         };
 
         // US style 2/@ key
-        N2AT: backspace_delete {
+        N2AT: number2_at {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp AT>;
@@ -48,7 +48,7 @@
         };
 
         // US style '/" key
-        QUOTE: backspace_delete {
+        QUOTE: single_quote_double_quote {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SQT>, <&kp DQT>;
