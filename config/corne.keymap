@@ -56,7 +56,7 @@
         };
 
         // Swap <> with () ",/("
-        COMMA: comma_left_bracket {
+        COMLPAR: comma_left_bracket {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp LPAR>;
@@ -97,7 +97,7 @@
                 default_layer {
                         bindings = <
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮  ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
-     &kp NUBS     &QUOTE       &COMMA       &DOT         &kp P        &kp Y           &kp F        &kp G        &kp C        &kp R        &kp L        &kp FSLH
+     &kp NUBS     &QUOTE       &COMLPAR     &DOT         &kp P        &kp Y           &kp F        &kp G        &kp C        &kp R        &kp L        &kp FSLH
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
      &kp ESC      &kp A       &hml LMETA O &hml LALT E  &hml LCTRL U  &kp I           &kp D       &hmr RCTRL H &hmr RALT T  &hmr RMETA N  &kp S        &kp MINUS
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
