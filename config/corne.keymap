@@ -92,6 +92,10 @@
     };
 };
 
+&soft_off {
+    hold-time-ms = <0>; // Only turn off it the key is held this time ms
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
