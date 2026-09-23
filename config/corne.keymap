@@ -96,6 +96,10 @@
     hold-time-ms = <0>; // Only turn off it the key is held this time ms
 };
 
+&lt {
+    quick-tap-ms = <200>;
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
