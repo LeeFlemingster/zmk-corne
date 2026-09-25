@@ -45,18 +45,16 @@
         N2AT: number2_at {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp SQT>;
+            bindings = <&kp N2>, <&kp AT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep_mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         // US style '/" key
         QUOTE: single_quote_double_quote {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp N2>;
+            bindings = <&kp SQT>, <&kp DQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep_mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         // Swap <> with () ",/("
@@ -91,15 +89,6 @@
             bindings = <&kp N0>, <&kp GT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
-        // `/~
-        BTT: backtick_tilde {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&kp NHUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 };
 
@@ -131,7 +120,7 @@
                 L1 {
                         bindings = <
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮  ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
-     &BTT         &kp F1       &kp F2       &kp F3       &kp F4       &kp F5          &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      __________
+     &kp GRAVE    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5          &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      __________
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
      &kp TAB      &kp N1       &N2AT        &kp N3       &kp N4       &kp N5          &kp N6       &kp N7       &kp N8       &NINE        &ZERO        __________
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
