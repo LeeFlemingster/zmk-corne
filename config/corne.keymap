@@ -96,7 +96,7 @@
         BTT: backtick_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp N2>;
+            bindings = <&kp GRAVE>, <&kp NUHS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
