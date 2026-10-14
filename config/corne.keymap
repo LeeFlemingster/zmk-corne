@@ -18,7 +18,7 @@
 #define ext_pwr_on &ext_power EP_ON
 #define key_bri &rgb_ug RGB_BRI
 #define key_brd &rgb_ug RGB_BRD
-#define key_hue &rgb_ug RGB_HUE
+#define key_hui &rgb_ug RGB_HUI
 #define key_hud &rgb_ug RGB_HUD
 #define key_sai &rgb_ug RGB_SAI
 #define key_sad &rgb_ug RGB_SAD
@@ -160,7 +160,7 @@
                 L2 {
                         bindings = <
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮  ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
-     __________   __________   key_sai      key_hue      key_bri     &kp C_VOL_UP     __________   &bt BT_CLR   __________   __________   __________   __________
+     __________   __________   key_sai      key_hui      key_bri     &kp C_VOL_UP     __________   &bt BT_CLR   __________   __________   __________   __________
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
      __________   __________   key_sad      key_hud      key_brd     &kp C_VOL_DN    &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
