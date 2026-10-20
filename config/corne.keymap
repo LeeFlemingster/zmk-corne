@@ -18,7 +18,7 @@
 #define ext_pwr_off &rgb_ug RGB_OFF
 #define ext_pwr_on &rgb_ug RGB_ON
 #define rgb_onoff &rgb_ug RGB_TOG
-#define rgb_nxt &rgb_ug RGB_EFR
+#define rgb_nxt &rgb_ug RGB_EFF
 #define key_bri &rgb_ug RGB_BRI
 #define key_brd &rgb_ug RGB_BRD
 #define key_hui &rgb_ug RGB_HUI
@@ -223,7 +223,7 @@
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
      __________   __________   key_sad      key_hud      key_brd     &kp C_VOL_DN    &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-     &soft_off    &bootloader  __________   &rgb_fx FX_NEXT   rgb_onoff    &kp C_MUTE      __________   __________   __________   __________   &bootloader  &soft_off
+     &soft_off    &bootloader  __________   rgb_nxt      rgb_onoff    &kp C_MUTE      __________   __________   __________   __________   &bootloader  &soft_off
 // ╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┴────────────┴────────────┴────────────╯
                                             __________   __________   __________      __________   __________   __________
 //                                        ╰────────────┴────────────┴────────────╯  ╰────────────┴────────────┴────────────╯
