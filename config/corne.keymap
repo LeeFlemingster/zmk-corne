@@ -28,53 +28,54 @@
     chain-length = <27>;
 };
 
-rgb_fx_colors {
-    compatible = "zmk,rgb-fx-colors";
-
-    // Custom Hex Definitions (RGB format)
-    org_color: orange { color = <0xFF 0x55 0x00>; };
-    ylw_color: yellow { color = <0xFF 0xFF 0x00>; };
-};
-
-rgb_fx_theme_dvorak_alphas {
-    compatible = "zmk,rgb-fx-theme-static";
-    label = "ORANGE_ALPHAS";
-
-    // Maps the 21 physical LEDs on the left half.
-    // Assumes a standard row-by-row layout path:
-    colors = <
-        // --- TOP ROW ---
-        &ylw_color   // Tab (Mod)
-        &org_color   // ' (Alpha)
-        &org_color   // , (Alpha)
-        &org_color   // . (Alpha)
-        &org_color   // P (Alpha)
-        &org_color   // Y (Alpha)
-
-        // --- HOME ROW ---
-        &ylw_color   // Control / Caps (Mod)
-        &org_color   // A (Alpha)
-        &org_color   // O (Alpha)
-        &org_color   // E (Alpha)
-        &org_color   // U (Alpha)
-        &org_color   // I (Alpha)
-
-        // --- BOTTOM ROW ---
-        &ylw_color   // Shift (Mod)
-        &org_color   // ; (Alpha)
-        &org_color   // Q (Alpha)
-        &org_color   // J (Alpha)
-        &org_color   // K (Alpha)
-        &org_color   // X (Alpha)
-
-        // --- THUMB CLUSTER ---
-        &ylw_color   // Thumb 1 (Mod / Layer)
-        &ylw_color   // Thumb 2 (Mod / Space)
-        &ylw_color   // Thumb 3 (Mod / Alt)
-    >;
-};
-
 / {
+
+    RGB_FX_COLORS {
+        COMPATIBLE = "ZMK,RGB-FX-COLORS";
+
+        // cUSTOM hEX dEFINITIONS (rgb FORMAT)
+        ORG_COLOR: ORANGE { COLOR = <0Xff 0X55 0X00>; };
+        YLW_COLOR: YELLOW { COLOR = <0Xff 0Xff 0X00>; };
+    };
+
+    RGB_FX_THEME_DVORAK_ALPHAS {
+        COMPATIBLE = "ZMK,RGB-FX-THEME-STATIC";
+        LABEL = "orange_alphas";
+
+        // mAPS THE 21 PHYSICAL ledS ON THE LEFT HALF.
+        // aSSUMES A STANDARD ROW-BY-ROW LAYOUT PATH:
+        COLORS = <
+            // --- top row ---
+            &YLW_COLOR   // tAB (mOD)
+            &ORG_COLOR   // ' (aLPHA)
+            &ORG_COLOR   // , (aLPHA)
+            &ORG_COLOR   // . (aLPHA)
+            &ORG_COLOR   // p (aLPHA)
+            &ORG_COLOR   // y (aLPHA)
+
+            // --- home row ---
+            &YLW_COLOR   // cONTROL / cAPS (mOD)
+            &ORG_COLOR   // a (aLPHA)
+            &ORG_COLOR   // o (aLPHA)
+            &ORG_COLOR   // e (aLPHA)
+            &ORG_COLOR   // u (aLPHA)
+            &ORG_COLOR   // i (aLPHA)
+
+            // --- bottom row ---
+            &YLW_COLOR   // sHIFT (mOD)
+            &ORG_COLOR   // ; (aLPHA)
+            &ORG_COLOR   // q (aLPHA)
+            &ORG_COLOR   // j (aLPHA)
+            &ORG_COLOR   // k (aLPHA)
+            &ORG_COLOR   // x (aLPHA)
+
+            // --- thumb cluster ---
+            &YLW_COLOR   // tHUMB 1 (mOD / lAYER)
+            &YLW_COLOR   // tHUMB 2 (mOD / sPACE)
+            &YLW_COLOR   // tHUMB 3 (mOD / aLT)
+        >;
+    };
+
     behaviors {
         // left-hand hrm
         hml: left_side_homerow_mod {
