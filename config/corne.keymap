@@ -38,8 +38,8 @@
     rgb_fx_colors {
         compatible = "zmk,rgb-fx-colors";
 
-        org_color: orange { color = <0xFF 0x55 0x00>; };
-        ylw_color: yellow { color = <0xFF 0xFF 0x00>; };
+        ORG_COLOR: orange { color = <0xFF 0x55 0x00>; };
+        YLW_COLOR: yellow { color = <0xFF 0xFF 0x00>; };
     };
 
     // Note the added handle name 'rgb_fx_theme_dvorak_alphas:' so the chosen node can point to it
