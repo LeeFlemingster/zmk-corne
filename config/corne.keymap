@@ -30,54 +30,58 @@
 
 / {
 
-    // THIS CHOSEN NODE SETS YOUR DEFAULT STARTUP EFFECT
     chosen {
+        // 1. Explicitly hook the zmk-rgb-fx extension engine
+        zmk,rgb-fx = &rgb_fx_theme_dvorak_alphas;
         zmk,rgb-fx-default-effect = &rgb_fx_theme_dvorak_alphas;
     };
 
     rgb_fx_colors {
         compatible = "zmk,rgb-fx-colors";
 
-        ORG_COLOR: orange { color = <0xFF 0x55 0x00>; };
-        YLW_COLOR: yellow { color = <0xFF 0xFF 0x00>; };
+        // Lowercase handles
+        org_color: orange { color = <0xFF 0x55 0x00>; };
+        ylw_color: yellow { color = <0xFF 0xFF 0x00>; };
     };
 
-    // Note the added handle name 'rgb_fx_theme_dvorak_alphas:' so the chosen node can point to it
     rgb_fx_theme_dvorak_alphas: rgb_fx_theme_dvorak_alphas {
         compatible = "zmk,rgb-fx-theme-static";
         label = "ORANGE_ALPHAS";
 
-        // mAPS THE 21 PHYSICAL ledS ON THE LEFT HALF.
-        // aSSUMES A STANDARD ROW-BY-ROW LAYOUT PATH:
-        COLORS = <
-            // --- top row ---
-            &YLW_COLOR   // tAB (mOD)
-            &ORG_COLOR   // ' (aLPHA)
-            &ORG_COLOR   // , (aLPHA)
-            &ORG_COLOR   // . (aLPHA)
-            &ORG_COLOR   // p (aLPHA)
-            &ORG_COLOR   // y (aLPHA)
+        // FIXED: must be lowercase "colors" to bind correctly
+        colors = <
+            // --- TOP ROW ---
+            &ylw_color   // Tab (Mod)
+            &org_color   // ' (Alpha)
+            &org_color   // , (Alpha)
+            &org_color   // . (Alpha)
+            &org_color   // P (Alpha)
+            &org_color   // Y (Alpha)
 
-            // --- home row ---
-            &YLW_COLOR   // cONTROL / cAPS (mOD)
-            &ORG_COLOR   // a (aLPHA)
-            &ORG_COLOR   // o (aLPHA)
-            &ORG_COLOR   // e (aLPHA)
-            &ORG_COLOR   // u (aLPHA)
-            &ORG_COLOR   // i (aLPHA)
+            // --- HOME ROW ---
+            &ylw_color   // Control / Caps (Mod)
+            &org_color   // A (Alpha)
+            &org_color   // O (Alpha)
+            &org_color   // E (Alpha)
+            &org_color   // U (Alpha)
+            &org_color   // I (Alpha)
 
-            // --- bottom row ---
-            &YLW_COLOR   // sHIFT (mOD)
-            &ORG_COLOR   // ; (aLPHA)
-            &ORG_COLOR   // q (aLPHA)
-            &ORG_COLOR   // j (aLPHA)
-            &ORG_COLOR   // k (aLPHA)
-            &ORG_COLOR   // x (aLPHA)
+            // --- BOTTOM ROW ---
+            &ylw_color   // Shift (Mod)
+            &org_color   // ; (Alpha)
+            &org_color   // Q (Alpha)
+            &org_color   // J (Alpha)
+            &org_color   // K (Alpha)
+            &org_color   // X (Alpha)
 
-            // --- thumb cluster ---
-            &YLW_COLOR   // tHUMB 1 (mOD / lAYER)
-            &YLW_COLOR   // tHUMB 2 (mOD / sPACE)
-            &YLW_COLOR   // tHUMB 3 (mOD / aLT)
+            // --- THUMB CLUSTER ---
+            &ylw_color   // Thumb 1 (Mod / Layer)
+            &ylw_color   // Thumb 2 (Mod / Space)
+            &ylw_color   // Thumb 3 (Mod / Alt)
+
+            // --- OPTIONAL UNDERGLOW CORNE LEDs ---
+            // Because chain-length is 27, add 6 trailing slots to cover the bottom LEDs
+            &ylw_color &ylw_color &ylw_color &ylw_color &ylw_color &ylw_color
         >;
     };
 
