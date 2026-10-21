@@ -26,7 +26,7 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
-            hold-while-undecided-linger;
+            hold-while-undecided;
         };
 
         // Home row mods.
