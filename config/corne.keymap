@@ -64,6 +64,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             bindings = <&kp>, <&caps_word>;
+            hold-while-undecided;
         };
 
         // US style 2/@ key
