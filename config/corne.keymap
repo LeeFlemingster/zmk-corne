@@ -67,6 +67,7 @@
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp LPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         // Swap <> with () "./)"
