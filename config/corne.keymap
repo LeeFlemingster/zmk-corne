@@ -109,6 +109,7 @@
             #binding-cells = <0>;
             bindings = <&kp N9>, <&kp LT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         // Swap <> with () "0/>"
@@ -117,6 +118,7 @@
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp GT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         // `/~
