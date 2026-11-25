@@ -131,6 +131,40 @@
         };
 
     };
+
+    macros {
+
+        bt_0: bt_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE>, <&bt BT_SEL 0>;
+        };
+
+        bt_1: bt_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE>, <&bt BT_SEL 1>;
+        };
+
+        bt_2: bt_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE>, <&bt BT_SEL 2>;
+        };
+
+        bt_3: bt_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE>, <&bt BT_SEL 3>;
+        };
+
+        bt_4: bt_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE>, <&bt BT_SEL 4>;
+        };
+
+    };
 };
 
 &soft_off {
@@ -177,9 +211,9 @@
                         bindings = <
 
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮  ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
-     __________   __________   key_sai      key_hui      key_bri     &kp C_VOL_UP    &out OUT_BLE &bt BT_CLR   __________   __________   __________   __________
+     __________   __________   key_sai      key_hui      key_bri     &kp C_VOL_UP    &out OUT_BLE  &bt BT_CLR   __________   __________   __________   __________
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-     __________   __________   key_sad      key_hud      key_brd     &kp C_VOL_DN    &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+     __________   __________   key_sad      key_hud      key_brd     &kp C_VOL_DN    &out OUT_TOG  &bt_0        &bt_1        &bt_2        @bt_3        &bt_4
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
      &soft_off    &bootloader  __________   __________   RGBTOG       &kp C_MUTE     &out OUT_USB  __________   __________   __________   &bootloader  &soft_off
 // ╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤  ├────────────┼────────────┼────────────┴────────────┴────────────┴────────────╯
